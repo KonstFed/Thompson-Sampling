@@ -161,7 +161,7 @@ class UCBsolver(Solver):
                 values.append(np.inf)
             else:
                 uncertainty = self.confidence_level * np.sqrt(
-                    np.log(self.count) / self.n_calls[i]
+                    np.log(1.5 * self.count) / self.n_calls[i]
                 )
                 values.append(mean + uncertainty)
         return values
